@@ -6,11 +6,87 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1D8172E918ECE87E0036D284 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8172E818ECE87E0036D284 /* Cocoa.framework */; };
+		1D8172F318ECE87E0036D284 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D8172F118ECE87E0036D284 /* InfoPlist.strings */; };
+		1D81731318ECE8E10036D284 /* CGIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81731118ECE8E00036D284 /* CGIHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D81731418ECE8E10036D284 /* CGIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81731218ECE8E10036D284 /* CGIHTTPRequest.m */; };
+		1D81731618ECEAEF0036D284 /* CGICommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81731518ECEAEF0036D284 /* CGICommon.m */; };
+		1D81731818ECEAFE0036D284 /* CGIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8172F518ECE87E0036D284 /* CGIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D81731918ECEAFE0036D284 /* CGICommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81731718ECEAF80036D284 /* CGICommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D81731C18ECECC70036D284 /* CGIHTTPResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81731A18ECECC70036D284 /* CGIHTTPResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D81731D18ECECC70036D284 /* CGIHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81731B18ECECC70036D284 /* CGIHTTPResponse.m */; };
+		1D81732418ECED0D0036D284 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8172E818ECE87E0036D284 /* Cocoa.framework */; };
+		1D81732A18ECED0D0036D284 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D81732818ECED0D0036D284 /* InfoPlist.strings */; };
+		1D81734B18ED195C0036D284 /* CGIWebCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81734918ED195C0036D284 /* CGIWebCoordinator.h */; };
+		1D81734C18ED195C0036D284 /* CGIWebCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81734A18ED195C0036D284 /* CGIWebCoordinator.m */; };
+		1D81734F18ED19EC0036D284 /* CGIHTTPContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81734D18ED19EC0036D284 /* CGIHTTPContext.h */; };
+		1D81735018ED19EC0036D284 /* CGIHTTPContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81734E18ED19EC0036D284 /* CGIHTTPContext.m */; };
+		1D81739218ED218A0036D284 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8172E818ECE87E0036D284 /* Cocoa.framework */; };
+		1D81739818ED218A0036D284 /* mod_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81739718ED218A0036D284 /* mod_objc.m */; };
+		1D8173B318ED241A0036D284 /* CGIApacheModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8173B118ED241A0036D284 /* CGIApacheModule.h */; };
+		1D8173B418ED241A0036D284 /* CGIApacheModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173B218ED241A0036D284 /* CGIApacheModule.m */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1D38226B18E9467E00EFEB43 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1D8172DE18ECE65A0036D284 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 		1D8172DF18ECE69F0036D284 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1D8172E518ECE87E0036D284 /* CGIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CGIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D8172E818ECE87E0036D284 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1D8172EB18ECE87E0036D284 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D8172EC18ECE87E0036D284 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1D8172ED18ECE87E0036D284 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1D8172F018ECE87E0036D284 /* CGIKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CGIKit-Info.plist"; sourceTree = "<group>"; };
+		1D8172F218ECE87E0036D284 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D8172F518ECE87E0036D284 /* CGIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGIKit.h; sourceTree = "<group>"; };
+		1D8172FD18ECE87E0036D284 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1D81731118ECE8E00036D284 /* CGIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPRequest.h; sourceTree = "<group>"; };
+		1D81731218ECE8E10036D284 /* CGIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPRequest.m; sourceTree = "<group>"; };
+		1D81731518ECEAEF0036D284 /* CGICommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGICommon.m; sourceTree = "<group>"; };
+		1D81731718ECEAF80036D284 /* CGICommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGICommon.h; sourceTree = "<group>"; };
+		1D81731A18ECECC70036D284 /* CGIHTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPResponse.h; sourceTree = "<group>"; };
+		1D81731B18ECECC70036D284 /* CGIHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPResponse.m; sourceTree = "<group>"; };
+		1D81732318ECED0D0036D284 /* CGIServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CGIServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D81732718ECED0D0036D284 /* CGIServer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CGIServer-Info.plist"; sourceTree = "<group>"; };
+		1D81732918ECED0D0036D284 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D81732C18ECED0D0036D284 /* CGIServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGIServer.h; sourceTree = "<group>"; };
+		1D81734918ED195C0036D284 /* CGIWebCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIWebCoordinator.h; sourceTree = "<group>"; };
+		1D81734A18ED195C0036D284 /* CGIWebCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIWebCoordinator.m; sourceTree = "<group>"; };
+		1D81734D18ED19EC0036D284 /* CGIHTTPContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPContext.h; sourceTree = "<group>"; };
+		1D81734E18ED19EC0036D284 /* CGIHTTPContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPContext.m; sourceTree = "<group>"; };
+		1D81739118ED218A0036D284 /* mod_objc.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = mod_objc.so; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D81739718ED218A0036D284 /* mod_objc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mod_objc.m; sourceTree = "<group>"; };
+		1D8173B118ED241A0036D284 /* CGIApacheModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIApacheModule.h; sourceTree = "<group>"; };
+		1D8173B218ED241A0036D284 /* CGIApacheModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIApacheModule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D8172E118ECE87E0036D284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D8172E918ECE87E0036D284 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D81731F18ECED0D0036D284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D81732418ECED0D0036D284 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D81738E18ED218A0036D284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D81739218ED218A0036D284 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		1D38226418E9464800EFEB43 = {
@@ -19,16 +95,196 @@
 				1D8172DF18ECE69F0036D284 /* .gitignore */,
 				1D8172DE18ECE65A0036D284 /* LICENSE.md */,
 				1D38226B18E9467E00EFEB43 /* README.md */,
+				1D8172EE18ECE87E0036D284 /* CGIKit */,
+				1D81732518ECED0D0036D284 /* CGIServer */,
+				1D81739318ED218A0036D284 /* mod_objc */,
+				1D8172E718ECE87E0036D284 /* Frameworks */,
+				1D8172E618ECE87E0036D284 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
+		1D8172E618ECE87E0036D284 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D8172E518ECE87E0036D284 /* CGIKit.framework */,
+				1D81732318ECED0D0036D284 /* CGIServer.framework */,
+				1D81739118ED218A0036D284 /* mod_objc.so */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D8172E718ECE87E0036D284 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D8172E818ECE87E0036D284 /* Cocoa.framework */,
+				1D8172FD18ECE87E0036D284 /* XCTest.framework */,
+				1D8172EA18ECE87E0036D284 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D8172EA18ECE87E0036D284 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D8172EB18ECE87E0036D284 /* Foundation.framework */,
+				1D8172EC18ECE87E0036D284 /* CoreData.framework */,
+				1D8172ED18ECE87E0036D284 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1D8172EE18ECE87E0036D284 /* CGIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1D8172F518ECE87E0036D284 /* CGIKit.h */,
+				1D81731718ECEAF80036D284 /* CGICommon.h */,
+				1D81731518ECEAEF0036D284 /* CGICommon.m */,
+				1D81731118ECE8E00036D284 /* CGIHTTPRequest.h */,
+				1D81731218ECE8E10036D284 /* CGIHTTPRequest.m */,
+				1D81731A18ECECC70036D284 /* CGIHTTPResponse.h */,
+				1D81731B18ECECC70036D284 /* CGIHTTPResponse.m */,
+				1D81734D18ED19EC0036D284 /* CGIHTTPContext.h */,
+				1D81734E18ED19EC0036D284 /* CGIHTTPContext.m */,
+				1D8172EF18ECE87E0036D284 /* Supporting Files */,
+			);
+			path = CGIKit;
+			sourceTree = "<group>";
+		};
+		1D8172EF18ECE87E0036D284 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D8172F018ECE87E0036D284 /* CGIKit-Info.plist */,
+				1D8172F118ECE87E0036D284 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D81732518ECED0D0036D284 /* CGIServer */ = {
+			isa = PBXGroup;
+			children = (
+				1D81732C18ECED0D0036D284 /* CGIServer.h */,
+				1D81734918ED195C0036D284 /* CGIWebCoordinator.h */,
+				1D81734A18ED195C0036D284 /* CGIWebCoordinator.m */,
+				1D81732618ECED0D0036D284 /* Supporting Files */,
+			);
+			path = CGIServer;
+			sourceTree = "<group>";
+		};
+		1D81732618ECED0D0036D284 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D81732718ECED0D0036D284 /* CGIServer-Info.plist */,
+				1D81732818ECED0D0036D284 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D81739318ED218A0036D284 /* mod_objc */ = {
+			isa = PBXGroup;
+			children = (
+				1D81739718ED218A0036D284 /* mod_objc.m */,
+				1D8173B118ED241A0036D284 /* CGIApacheModule.h */,
+				1D8173B218ED241A0036D284 /* CGIApacheModule.m */,
+			);
+			path = mod_objc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1D8172E218ECE87E0036D284 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D81731918ECEAFE0036D284 /* CGICommon.h in Headers */,
+				1D81731C18ECECC70036D284 /* CGIHTTPResponse.h in Headers */,
+				1D81731318ECE8E10036D284 /* CGIHTTPRequest.h in Headers */,
+				1D81731818ECEAFE0036D284 /* CGIKit.h in Headers */,
+				1D81734F18ED19EC0036D284 /* CGIHTTPContext.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D81732018ECED0D0036D284 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D81734B18ED195C0036D284 /* CGIWebCoordinator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D81738F18ED218A0036D284 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D8173B318ED241A0036D284 /* CGIApacheModule.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D8172E418ECE87E0036D284 /* CGIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D81730B18ECE87E0036D284 /* Build configuration list for PBXNativeTarget "CGIKit" */;
+			buildPhases = (
+				1D8172E018ECE87E0036D284 /* Sources */,
+				1D8172E118ECE87E0036D284 /* Frameworks */,
+				1D8172E218ECE87E0036D284 /* Headers */,
+				1D8172E318ECE87E0036D284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CGIKit;
+			productName = CGIKit;
+			productReference = 1D8172E518ECE87E0036D284 /* CGIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1D81732218ECED0D0036D284 /* CGIServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D81734118ECED0E0036D284 /* Build configuration list for PBXNativeTarget "CGIServer" */;
+			buildPhases = (
+				1D81731E18ECED0D0036D284 /* Sources */,
+				1D81731F18ECED0D0036D284 /* Frameworks */,
+				1D81732018ECED0D0036D284 /* Headers */,
+				1D81732118ECED0D0036D284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CGIServer;
+			productName = CGIServer;
+			productReference = 1D81732318ECED0D0036D284 /* CGIServer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1D81739018ED218A0036D284 /* mod_objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D8173AB18ED218A0036D284 /* Build configuration list for PBXNativeTarget "mod_objc" */;
+			buildPhases = (
+				1D81738D18ED218A0036D284 /* Sources */,
+				1D81738E18ED218A0036D284 /* Frameworks */,
+				1D81738F18ED218A0036D284 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mod_objc;
+			productName = mod_objc;
+			productReference = 1D81739118ED218A0036D284 /* mod_objc.so */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1D38226518E9464800EFEB43 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CGI;
 				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = muski;
 			};
 			buildConfigurationList = 1D38226818E9464800EFEB43 /* Build configuration list for PBXProject "CGIKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -38,12 +294,85 @@
 				en,
 			);
 			mainGroup = 1D38226418E9464800EFEB43;
+			productRefGroup = 1D8172E618ECE87E0036D284 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				1D8172E418ECE87E0036D284 /* CGIKit */,
+				1D81732218ECED0D0036D284 /* CGIServer */,
+				1D81739018ED218A0036D284 /* mod_objc */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D8172E318ECE87E0036D284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D8172F318ECE87E0036D284 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D81732118ECED0D0036D284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D81732A18ECED0D0036D284 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D8172E018ECE87E0036D284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D81731618ECEAEF0036D284 /* CGICommon.m in Sources */,
+				1D81731418ECE8E10036D284 /* CGIHTTPRequest.m in Sources */,
+				1D81731D18ECECC70036D284 /* CGIHTTPResponse.m in Sources */,
+				1D81735018ED19EC0036D284 /* CGIHTTPContext.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D81731E18ECED0D0036D284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D81734C18ED195C0036D284 /* CGIWebCoordinator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D81738D18ED218A0036D284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D81739818ED218A0036D284 /* mod_objc.m in Sources */,
+				1D8173B418ED241A0036D284 /* CGIApacheModule.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1D8172F118ECE87E0036D284 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D8172F218ECE87E0036D284 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1D81732818ECED0D0036D284 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D81732918ECED0D0036D284 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D38226918E9464800EFEB43 /* Debug */ = {
@@ -58,6 +387,268 @@
 			};
 			name = Release;
 		};
+		1D81730C18ECE87E0036D284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "CGIKit/CGIKit-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1D81730D18ECE87E0036D284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "CGIKit/CGIKit-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		1D81734218ECED0E0036D284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "CGIServer/CGIServer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1D81734318ECED0E0036D284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "CGIServer/CGIServer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		1D8173AC18ED218A0036D284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = so;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/apache2,
+					"/usr/include/apr-1",
+				);
+				INSTALL_PATH = /usr/libexec/apache2;
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1D8173AD18ED218A0036D284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				EXECUTABLE_EXTENSION = so;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/apache2,
+					"/usr/include/apr-1",
+				);
+				INSTALL_PATH = /usr/libexec/apache2;
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -69,6 +660,30 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		1D81730B18ECE87E0036D284 /* Build configuration list for PBXNativeTarget "CGIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D81730C18ECE87E0036D284 /* Debug */,
+				1D81730D18ECE87E0036D284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D81734118ECED0E0036D284 /* Build configuration list for PBXNativeTarget "CGIServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D81734218ECED0E0036D284 /* Debug */,
+				1D81734318ECED0E0036D284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D8173AB18ED218A0036D284 /* Build configuration list for PBXNativeTarget "mod_objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D8173AC18ED218A0036D284 /* Debug */,
+				1D8173AD18ED218A0036D284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
