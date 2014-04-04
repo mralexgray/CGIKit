@@ -68,8 +68,10 @@
 
 int CGIProcessRequest(request_rec *r)
 {
-    if (!r->handler || strcmp(r->handler, "CGIProcessRequest"))
+    if (!r->handler || strcmp(r->handler, "wib-handler"))
         return DECLINED;
+    
+    NSLog(@"Handling Web Interface Builder file %s.", r->uri);
     
     CGIApacheModule *module = [[CGIApacheModule alloc] init];
     return [module handleRequest:r];
@@ -77,7 +79,8 @@ int CGIProcessRequest(request_rec *r)
 
 void CGIAddServerHooks(apr_pool_t *p)
 {
-    ap_hook_handler(CGIProcessRequest, NULL, NULL, APR_HOOK_FIRST);
+    NSLog(@"CGIKit 7.0 initializing.");
+    ap_hook_handler(CGIProcessRequest, NULL, NULL, APR_HOOK_LAST);
 }
 
 
