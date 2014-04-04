@@ -51,6 +51,7 @@
 		1D8173F518EF0AAF0036D284 /* CGIServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D81732318ECED0D0036D284 /* CGIServer.framework */; };
 		1D8173F818EF0ACE0036D284 /* CGICoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173F718EF0ACE0036D284 /* CGICoordinator.m */; };
 		1D8173FB18EF106F0036D284 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173FA18EF106F0036D284 /* GCDAsyncSocket.m */; };
+		1D8173FF18EF1BFD0036D284 /* CGIVirtualHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173FE18EF1BFD0036D284 /* CGIVirtualHost.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -128,6 +129,9 @@
 		1D8173F718EF0ACE0036D284 /* CGICoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGICoordinator.m; sourceTree = "<group>"; };
 		1D8173F918EF106F0036D284 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Frameworks/CocoaAsyncSocket/GCD/GCDAsyncSocket.h; sourceTree = SOURCE_ROOT; };
 		1D8173FA18EF106F0036D284 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Frameworks/CocoaAsyncSocket/GCD/GCDAsyncSocket.m; sourceTree = SOURCE_ROOT; };
+		1D8173FC18EF191E0036D284 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		1D8173FD18EF1BFD0036D284 /* CGIVirtualHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIVirtualHost.h; sourceTree = "<group>"; };
+		1D8173FE18EF1BFD0036D284 /* CGIVirtualHost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIVirtualHost.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,7 +306,10 @@
 			children = (
 				1D8173F918EF106F0036D284 /* GCDAsyncSocket.h */,
 				1D8173FA18EF106F0036D284 /* GCDAsyncSocket.m */,
+				1D8173FC18EF191E0036D284 /* main.h */,
 				1D8173D918EF0A590036D284 /* main.m */,
+				1D8173FD18EF1BFD0036D284 /* CGIVirtualHost.h */,
+				1D8173FE18EF1BFD0036D284 /* CGIVirtualHost.m */,
 				1D8173DD18EF0A590036D284 /* ochttpd.1 */,
 			);
 			path = ochttpd;
@@ -534,6 +541,7 @@
 			files = (
 				1D8173FB18EF106F0036D284 /* GCDAsyncSocket.m in Sources */,
 				1D8173DA18EF0A590036D284 /* main.m in Sources */,
+				1D8173FF18EF1BFD0036D284 /* CGIVirtualHost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
