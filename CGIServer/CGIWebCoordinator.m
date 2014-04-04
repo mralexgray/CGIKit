@@ -8,6 +8,8 @@
 
 #import "CGIWebCoordinator.h"
 
+NSString *const CGIWebCoordinatorPortName = @"CGIWebCoordinator";
+
 @implementation CGIWebCoordinator
 
 @end

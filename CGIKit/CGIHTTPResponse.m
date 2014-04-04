@@ -10,4 +10,6 @@
 
 @implementation CGIHTTPResponse
 
+@dynamic status, statusCode, headers, response, responseStream;
+
 @end

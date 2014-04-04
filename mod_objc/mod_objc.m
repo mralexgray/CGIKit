@@ -13,10 +13,10 @@
 module AP_MODULE_DECLARE_DATA objc_module =
 {
     STANDARD20_MODULE_STUFF,
-    CGIDirectoryConfigurationCreate,
-    CGIDirectoryConfigurationMerge,
-    CGIServerConfigurationCreate,
-    CGIServerConfigurationMerge,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
     NULL,
     CGIAddServerHooks
 };

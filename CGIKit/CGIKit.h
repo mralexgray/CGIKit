@@ -10,3 +10,5 @@
 
 #import <CGIKit/CGICommon.h>
 #import <CGIKit/CGIHTTPRequest.h>
+#import <CGIKit/CGIHTTPResponse.h>
+#import <CGIKit/CGIHTTPServer.h>

@@ -14,4 +14,6 @@ NSString *const CGIHTTPRequestMethodHead = @"HEAD";
 
 @implementation CGIHTTPRequest
 
+@dynamic URI, HTTPVersion, method, headers, request, requestStream;
+
 @end

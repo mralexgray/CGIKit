@@ -18,14 +18,27 @@
 		1D81731D18ECECC70036D284 /* CGIHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81731B18ECECC70036D284 /* CGIHTTPResponse.m */; };
 		1D81732418ECED0D0036D284 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8172E818ECE87E0036D284 /* Cocoa.framework */; };
 		1D81732A18ECED0D0036D284 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D81732818ECED0D0036D284 /* InfoPlist.strings */; };
-		1D81734B18ED195C0036D284 /* CGIWebCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81734918ED195C0036D284 /* CGIWebCoordinator.h */; };
+		1D81734B18ED195C0036D284 /* CGIWebCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81734918ED195C0036D284 /* CGIWebCoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D81734C18ED195C0036D284 /* CGIWebCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81734A18ED195C0036D284 /* CGIWebCoordinator.m */; };
-		1D81734F18ED19EC0036D284 /* CGIHTTPContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81734D18ED19EC0036D284 /* CGIHTTPContext.h */; };
-		1D81735018ED19EC0036D284 /* CGIHTTPContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81734E18ED19EC0036D284 /* CGIHTTPContext.m */; };
 		1D81739218ED218A0036D284 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8172E818ECE87E0036D284 /* Cocoa.framework */; };
 		1D81739818ED218A0036D284 /* mod_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81739718ED218A0036D284 /* mod_objc.m */; };
 		1D8173B318ED241A0036D284 /* CGIApacheModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8173B118ED241A0036D284 /* CGIApacheModule.h */; };
 		1D8173B418ED241A0036D284 /* CGIApacheModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173B218ED241A0036D284 /* CGIApacheModule.m */; };
+		1D8173B518ED4D780036D284 /* CGIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8172E518ECE87E0036D284 /* CGIKit.framework */; };
+		1D8173B618ED4D780036D284 /* CGIServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D81732318ECED0D0036D284 /* CGIServer.framework */; };
+		1D8173B818ED4DCF0036D284 /* libapr-1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8173B718ED4DCF0036D284 /* libapr-1.dylib */; };
+		1D8173BB18EE850F0036D284 /* CGIHTTPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8173B918EE850F0036D284 /* CGIHTTPServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D8173BC18EE850F0036D284 /* CGIHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173BA18EE850F0036D284 /* CGIHTTPServer.m */; };
+		1D8173BF18EE86050036D284 /* CGIApacheRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8173BD18EE86050036D284 /* CGIApacheRequest.h */; };
+		1D8173C018EE86050036D284 /* CGIApacheRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173BE18EE86050036D284 /* CGIApacheRequest.m */; };
+		1D8173C318EE861B0036D284 /* CGIApacheResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8173C118EE861B0036D284 /* CGIApacheResponse.h */; };
+		1D8173C418EE861B0036D284 /* CGIApacheResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173C218EE861B0036D284 /* CGIApacheResponse.m */; };
+		1D8173C718EE87640036D284 /* CGIApacheServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8173C518EE87640036D284 /* CGIApacheServer.h */; };
+		1D8173C818EE87640036D284 /* CGIApacheServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173C618EE87640036D284 /* CGIApacheServer.m */; };
+		1D8173CA18EE89040036D284 /* CGIServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81732C18ECED0D0036D284 /* CGIServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D8173CD18EE919C0036D284 /* CGIApacheOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8173CB18EE919C0036D284 /* CGIApacheOutputStream.h */; };
+		1D8173CE18EE919C0036D284 /* CGIApacheOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173CC18EE919C0036D284 /* CGIApacheOutputStream.m */; };
+		1D8173D018EE93720036D284 /* libaprutil-1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8173CF18EE93720036D284 /* libaprutil-1.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,12 +66,22 @@
 		1D81732C18ECED0D0036D284 /* CGIServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGIServer.h; sourceTree = "<group>"; };
 		1D81734918ED195C0036D284 /* CGIWebCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIWebCoordinator.h; sourceTree = "<group>"; };
 		1D81734A18ED195C0036D284 /* CGIWebCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIWebCoordinator.m; sourceTree = "<group>"; };
-		1D81734D18ED19EC0036D284 /* CGIHTTPContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPContext.h; sourceTree = "<group>"; };
-		1D81734E18ED19EC0036D284 /* CGIHTTPContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPContext.m; sourceTree = "<group>"; };
 		1D81739118ED218A0036D284 /* mod_objc.so */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = mod_objc.so; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D81739718ED218A0036D284 /* mod_objc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mod_objc.m; sourceTree = "<group>"; };
 		1D8173B118ED241A0036D284 /* CGIApacheModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIApacheModule.h; sourceTree = "<group>"; };
 		1D8173B218ED241A0036D284 /* CGIApacheModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIApacheModule.m; sourceTree = "<group>"; };
+		1D8173B718ED4DCF0036D284 /* libapr-1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libapr-1.dylib"; path = "usr/lib/libapr-1.dylib"; sourceTree = SDKROOT; };
+		1D8173B918EE850F0036D284 /* CGIHTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPServer.h; sourceTree = "<group>"; };
+		1D8173BA18EE850F0036D284 /* CGIHTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPServer.m; sourceTree = "<group>"; };
+		1D8173BD18EE86050036D284 /* CGIApacheRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIApacheRequest.h; sourceTree = "<group>"; };
+		1D8173BE18EE86050036D284 /* CGIApacheRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIApacheRequest.m; sourceTree = "<group>"; };
+		1D8173C118EE861B0036D284 /* CGIApacheResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIApacheResponse.h; sourceTree = "<group>"; };
+		1D8173C218EE861B0036D284 /* CGIApacheResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIApacheResponse.m; sourceTree = "<group>"; };
+		1D8173C518EE87640036D284 /* CGIApacheServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIApacheServer.h; sourceTree = "<group>"; };
+		1D8173C618EE87640036D284 /* CGIApacheServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIApacheServer.m; sourceTree = "<group>"; };
+		1D8173CB18EE919C0036D284 /* CGIApacheOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIApacheOutputStream.h; sourceTree = "<group>"; };
+		1D8173CC18EE919C0036D284 /* CGIApacheOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIApacheOutputStream.m; sourceTree = "<group>"; };
+		1D8173CF18EE93720036D284 /* libaprutil-1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libaprutil-1.dylib"; path = "usr/lib/libaprutil-1.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +105,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D8173D018EE93720036D284 /* libaprutil-1.dylib in Frameworks */,
+				1D8173B818ED4DCF0036D284 /* libapr-1.dylib in Frameworks */,
+				1D8173B518ED4D780036D284 /* CGIKit.framework in Frameworks */,
+				1D8173B618ED4D780036D284 /* CGIServer.framework in Frameworks */,
 				1D81739218ED218A0036D284 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +143,8 @@
 		1D8172E718ECE87E0036D284 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D8173CF18EE93720036D284 /* libaprutil-1.dylib */,
+				1D8173B718ED4DCF0036D284 /* libapr-1.dylib */,
 				1D8172E818ECE87E0036D284 /* Cocoa.framework */,
 				1D8172FD18ECE87E0036D284 /* XCTest.framework */,
 				1D8172EA18ECE87E0036D284 /* Other Frameworks */,
@@ -143,8 +172,8 @@
 				1D81731218ECE8E10036D284 /* CGIHTTPRequest.m */,
 				1D81731A18ECECC70036D284 /* CGIHTTPResponse.h */,
 				1D81731B18ECECC70036D284 /* CGIHTTPResponse.m */,
-				1D81734D18ED19EC0036D284 /* CGIHTTPContext.h */,
-				1D81734E18ED19EC0036D284 /* CGIHTTPContext.m */,
+				1D8173B918EE850F0036D284 /* CGIHTTPServer.h */,
+				1D8173BA18EE850F0036D284 /* CGIHTTPServer.m */,
 				1D8172EF18ECE87E0036D284 /* Supporting Files */,
 			);
 			path = CGIKit;
@@ -185,6 +214,14 @@
 				1D81739718ED218A0036D284 /* mod_objc.m */,
 				1D8173B118ED241A0036D284 /* CGIApacheModule.h */,
 				1D8173B218ED241A0036D284 /* CGIApacheModule.m */,
+				1D8173BD18EE86050036D284 /* CGIApacheRequest.h */,
+				1D8173BE18EE86050036D284 /* CGIApacheRequest.m */,
+				1D8173C118EE861B0036D284 /* CGIApacheResponse.h */,
+				1D8173C218EE861B0036D284 /* CGIApacheResponse.m */,
+				1D8173CB18EE919C0036D284 /* CGIApacheOutputStream.h */,
+				1D8173CC18EE919C0036D284 /* CGIApacheOutputStream.m */,
+				1D8173C518EE87640036D284 /* CGIApacheServer.h */,
+				1D8173C618EE87640036D284 /* CGIApacheServer.m */,
 			);
 			path = mod_objc;
 			sourceTree = "<group>";
@@ -198,9 +235,9 @@
 			files = (
 				1D81731918ECEAFE0036D284 /* CGICommon.h in Headers */,
 				1D81731C18ECECC70036D284 /* CGIHTTPResponse.h in Headers */,
+				1D8173BB18EE850F0036D284 /* CGIHTTPServer.h in Headers */,
 				1D81731318ECE8E10036D284 /* CGIHTTPRequest.h in Headers */,
 				1D81731818ECEAFE0036D284 /* CGIKit.h in Headers */,
-				1D81734F18ED19EC0036D284 /* CGIHTTPContext.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D81734B18ED195C0036D284 /* CGIWebCoordinator.h in Headers */,
+				1D8173CA18EE89040036D284 /* CGIServer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +254,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D8173C318EE861B0036D284 /* CGIApacheResponse.h in Headers */,
+				1D8173BF18EE86050036D284 /* CGIApacheRequest.h in Headers */,
+				1D8173CD18EE919C0036D284 /* CGIApacheOutputStream.h in Headers */,
 				1D8173B318ED241A0036D284 /* CGIApacheModule.h in Headers */,
+				1D8173C718EE87640036D284 /* CGIApacheServer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,10 +371,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D8173BC18EE850F0036D284 /* CGIHTTPServer.m in Sources */,
 				1D81731618ECEAEF0036D284 /* CGICommon.m in Sources */,
 				1D81731418ECE8E10036D284 /* CGIHTTPRequest.m in Sources */,
 				1D81731D18ECECC70036D284 /* CGIHTTPResponse.m in Sources */,
-				1D81735018ED19EC0036D284 /* CGIHTTPContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +390,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D8173CE18EE919C0036D284 /* CGIApacheOutputStream.m in Sources */,
+				1D8173C018EE86050036D284 /* CGIApacheRequest.m in Sources */,
+				1D8173C818EE87640036D284 /* CGIApacheServer.m in Sources */,
 				1D81739818ED218A0036D284 /* mod_objc.m in Sources */,
+				1D8173C418EE861B0036D284 /* CGIApacheResponse.m in Sources */,
 				1D8173B418ED241A0036D284 /* CGIApacheModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,8 +618,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
 				EXECUTABLE_EXTENSION = so;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -600,6 +646,10 @@
 				MACH_O_TYPE = mh_bundle;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -623,8 +673,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				EXECUTABLE_EXTENSION = so;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -644,6 +694,10 @@
 				INSTALL_PATH = /usr/libexec/apache2;
 				MACH_O_TYPE = mh_bundle;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};

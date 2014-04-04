@@ -10,4 +10,10 @@
 
 @interface CGIHTTPResponse : NSObject
 
+@property NSUInteger statusCode;
+@property NSString *status;
+@property NSDictionary *headers;
+@property NSMutableData *response;
+@property NSOutputStream *responseStream;
+
 @end

@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class CGIHTTPRequest;
-@class CGIHTTPResponse;
-@class CGIHTTPContext;
+@class CGIHTTPRequest, CGIHTTPResponse, CGIHTTPServer;
+
+extern NSString *const CGIWebCoordinatorPortName;
 
 @interface CGIWebCoordinator : NSObject
 
-- (BOOL)handleRequest:(in CGIHTTPRequest *)request withResponse:(inout CGIHTTPResponse *)response;
-- (BOOL)migrateContext:(inout CGIHTTPContext *)context;
+- (int)handleRequest:(in CGIHTTPRequest *)request
+            onServer:(in CGIHTTPServer *)server
+        withResponse:(inout CGIHTTPResponse *)response;
 
 @end
