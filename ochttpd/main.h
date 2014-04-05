@@ -13,4 +13,12 @@
 
 extern volatile BOOL keep_alive;
 
+#if DEBUG
+#define trace() fprintf(stderr, "debug: %s:%u: trace\n", __FILE__, __LINE__)
+#define tprintf(fmt, ...) fprintf(stderr, "debug: %s:%u: %s", __FILE__, __LINE__, [[NSString stringWithFormat:fmt, ##__VA_ARGS__] UTF8String])
+#else
+#define trace()
+#define tprintf(fmt, ...)
+#endif
+
 #endif

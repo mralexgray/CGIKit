@@ -50,8 +50,18 @@
 		1D8173F418EF0AAF0036D284 /* CGIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8172E518ECE87E0036D284 /* CGIKit.framework */; };
 		1D8173F518EF0AAF0036D284 /* CGIServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D81732318ECED0D0036D284 /* CGIServer.framework */; };
 		1D8173F818EF0ACE0036D284 /* CGICoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173F718EF0ACE0036D284 /* CGICoordinator.m */; };
-		1D8173FB18EF106F0036D284 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173FA18EF106F0036D284 /* GCDAsyncSocket.m */; };
+		1D8173FB18EF106F0036D284 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173FA18EF106F0036D284 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations"; }; };
 		1D8173FF18EF1BFD0036D284 /* CGIVirtualHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173FE18EF1BFD0036D284 /* CGIVirtualHost.m */; };
+		1D81740218EF232C0036D284 /* CGIServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81740118EF232C0036D284 /* CGIServer.m */; };
+		1D81740518EF2DBE0036D284 /* CGIServerContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81740418EF2DBE0036D284 /* CGIServerContext.m */; };
+		1D81740818EF36EE0036D284 /* CGIServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81740718EF36EE0036D284 /* CGIServerRequest.m */; };
+		1D81740B18EF37060036D284 /* CGIServerRequestStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81740A18EF37060036D284 /* CGIServerRequestStream.m */; };
+		1D81740E18EF37210036D284 /* CGIServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81740D18EF37210036D284 /* CGIServerResponse.m */; };
+		1D81741118EF37560036D284 /* CGIServerResponseStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81741018EF37560036D284 /* CGIServerResponseStream.m */; };
+		1D81741418EFC5640036D284 /* CGIBufferedOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81741218EFC5640036D284 /* CGIBufferedOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D81741518EFC5640036D284 /* CGIBufferedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81741318EFC5640036D284 /* CGIBufferedOutputStream.m */; };
+		1D81741818EFE0060036D284 /* CGIBufferedInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81741618EFE0060036D284 /* CGIBufferedInputStream.h */; };
+		1D81741918EFE0060036D284 /* CGIBufferedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81741718EFE0060036D284 /* CGIBufferedInputStream.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -132,6 +142,22 @@
 		1D8173FC18EF191E0036D284 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		1D8173FD18EF1BFD0036D284 /* CGIVirtualHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIVirtualHost.h; sourceTree = "<group>"; };
 		1D8173FE18EF1BFD0036D284 /* CGIVirtualHost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIVirtualHost.m; sourceTree = "<group>"; };
+		1D81740018EF232C0036D284 /* CGIServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIServer.h; sourceTree = "<group>"; };
+		1D81740118EF232C0036D284 /* CGIServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIServer.m; sourceTree = "<group>"; };
+		1D81740318EF2DBE0036D284 /* CGIServerContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIServerContext.h; sourceTree = "<group>"; };
+		1D81740418EF2DBE0036D284 /* CGIServerContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIServerContext.m; sourceTree = "<group>"; };
+		1D81740618EF36EE0036D284 /* CGIServerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIServerRequest.h; sourceTree = "<group>"; };
+		1D81740718EF36EE0036D284 /* CGIServerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIServerRequest.m; sourceTree = "<group>"; };
+		1D81740918EF37060036D284 /* CGIServerRequestStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIServerRequestStream.h; sourceTree = "<group>"; };
+		1D81740A18EF37060036D284 /* CGIServerRequestStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIServerRequestStream.m; sourceTree = "<group>"; };
+		1D81740C18EF37210036D284 /* CGIServerResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIServerResponse.h; sourceTree = "<group>"; };
+		1D81740D18EF37210036D284 /* CGIServerResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIServerResponse.m; sourceTree = "<group>"; };
+		1D81740F18EF37560036D284 /* CGIServerResponseStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIServerResponseStream.h; sourceTree = "<group>"; };
+		1D81741018EF37560036D284 /* CGIServerResponseStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIServerResponseStream.m; sourceTree = "<group>"; };
+		1D81741218EFC5640036D284 /* CGIBufferedOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIBufferedOutputStream.h; sourceTree = "<group>"; };
+		1D81741318EFC5640036D284 /* CGIBufferedOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIBufferedOutputStream.m; sourceTree = "<group>"; };
+		1D81741618EFE0060036D284 /* CGIBufferedInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIBufferedInputStream.h; sourceTree = "<group>"; };
+		1D81741718EFE0060036D284 /* CGIBufferedInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIBufferedInputStream.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +269,10 @@
 				1D8172F518ECE87E0036D284 /* CGIKit.h */,
 				1D81731718ECEAF80036D284 /* CGICommon.h */,
 				1D81731518ECEAEF0036D284 /* CGICommon.m */,
+				1D81741618EFE0060036D284 /* CGIBufferedInputStream.h */,
+				1D81741718EFE0060036D284 /* CGIBufferedInputStream.m */,
+				1D81741218EFC5640036D284 /* CGIBufferedOutputStream.h */,
+				1D81741318EFC5640036D284 /* CGIBufferedOutputStream.m */,
 				1D81731118ECE8E00036D284 /* CGIHTTPRequest.h */,
 				1D81731218ECE8E10036D284 /* CGIHTTPRequest.m */,
 				1D81731A18ECECC70036D284 /* CGIHTTPResponse.h */,
@@ -308,6 +338,18 @@
 				1D8173FA18EF106F0036D284 /* GCDAsyncSocket.m */,
 				1D8173FC18EF191E0036D284 /* main.h */,
 				1D8173D918EF0A590036D284 /* main.m */,
+				1D81740018EF232C0036D284 /* CGIServer.h */,
+				1D81740118EF232C0036D284 /* CGIServer.m */,
+				1D81740318EF2DBE0036D284 /* CGIServerContext.h */,
+				1D81740418EF2DBE0036D284 /* CGIServerContext.m */,
+				1D81740618EF36EE0036D284 /* CGIServerRequest.h */,
+				1D81740718EF36EE0036D284 /* CGIServerRequest.m */,
+				1D81740918EF37060036D284 /* CGIServerRequestStream.h */,
+				1D81740A18EF37060036D284 /* CGIServerRequestStream.m */,
+				1D81740C18EF37210036D284 /* CGIServerResponse.h */,
+				1D81740D18EF37210036D284 /* CGIServerResponse.m */,
+				1D81740F18EF37560036D284 /* CGIServerResponseStream.h */,
+				1D81741018EF37560036D284 /* CGIServerResponseStream.m */,
 				1D8173FD18EF1BFD0036D284 /* CGIVirtualHost.h */,
 				1D8173FE18EF1BFD0036D284 /* CGIVirtualHost.m */,
 				1D8173DD18EF0A590036D284 /* ochttpd.1 */,
@@ -334,9 +376,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D81731918ECEAFE0036D284 /* CGICommon.h in Headers */,
+				1D81741818EFE0060036D284 /* CGIBufferedInputStream.h in Headers */,
 				1D81731C18ECECC70036D284 /* CGIHTTPResponse.h in Headers */,
 				1D8173BB18EE850F0036D284 /* CGIHTTPServer.h in Headers */,
 				1D81731318ECE8E10036D284 /* CGIHTTPRequest.h in Headers */,
+				1D81741418EFC5640036D284 /* CGIBufferedOutputStream.h in Headers */,
 				1D81731818ECEAFE0036D284 /* CGIKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +551,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D81741518EFC5640036D284 /* CGIBufferedOutputStream.m in Sources */,
+				1D81741918EFE0060036D284 /* CGIBufferedInputStream.m in Sources */,
 				1D8173BC18EE850F0036D284 /* CGIHTTPServer.m in Sources */,
 				1D81731618ECEAEF0036D284 /* CGICommon.m in Sources */,
 				1D81731418ECE8E10036D284 /* CGIHTTPRequest.m in Sources */,
@@ -539,9 +585,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D81740B18EF37060036D284 /* CGIServerRequestStream.m in Sources */,
+				1D81740218EF232C0036D284 /* CGIServer.m in Sources */,
 				1D8173FB18EF106F0036D284 /* GCDAsyncSocket.m in Sources */,
+				1D81740818EF36EE0036D284 /* CGIServerRequest.m in Sources */,
 				1D8173DA18EF0A590036D284 /* main.m in Sources */,
 				1D8173FF18EF1BFD0036D284 /* CGIVirtualHost.m in Sources */,
+				1D81741118EF37560036D284 /* CGIServerResponseStream.m in Sources */,
+				1D81740518EF2DBE0036D284 /* CGIServerContext.m in Sources */,
+				1D81740E18EF37210036D284 /* CGIServerResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,12 +631,18 @@
 		1D38226918E9464800EFEB43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 			};
 			name = Debug;
 		};
 		1D38226A18E9464800EFEB43 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 			};
 			name = Release;
 		};
@@ -592,8 +650,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -609,7 +665,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -637,8 +692,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -656,7 +709,6 @@
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -676,8 +728,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -693,7 +743,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -721,8 +770,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -740,7 +787,6 @@
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -760,8 +806,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -776,7 +820,6 @@
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
 				EXECUTABLE_EXTENSION = so;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -814,8 +857,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -832,7 +873,6 @@
 				DYLIB_CURRENT_VERSION = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				EXECUTABLE_EXTENSION = so;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -862,8 +902,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -875,7 +913,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -901,8 +938,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -916,7 +951,6 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -934,8 +968,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -947,7 +979,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -973,8 +1004,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -988,7 +1017,6 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;

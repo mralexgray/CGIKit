@@ -10,7 +10,7 @@
 
 @implementation CGICoordinator
 
-- (int)handleRequest:(in CGIHTTPRequest *)request onServer:(in CGIHTTPServer *)server withResponse:(inout CGIHTTPResponse *)response
+- (int)handleRequest:(in CGIHTTPRequest *)request withResponse:(inout CGIHTTPResponse *)response
 {
     return 0;
 }
