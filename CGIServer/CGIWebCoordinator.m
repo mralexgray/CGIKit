@@ -12,7 +12,7 @@ NSString *const CGIWebCoordinatorPortName = @"CGIWebCoordinator";
 
 @implementation CGIWebCoordinator
 
-- (int)handleRequest:(in CGIHTTPRequest *)request onServer:(in CGIHTTPServer *)server withResponse:(inout CGIHTTPResponse *)response
+- (int)handleRequest:(in CGIHTTPRequest *)request withResponse:(inout CGIHTTPResponse *)response
 {
     [self doesNotRecognizeSelector:_cmd];
     return 0;

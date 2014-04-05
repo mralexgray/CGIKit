@@ -61,7 +61,9 @@
         return EXIT_SUCCESS;
     }
     
-    return [coordinator handleRequest:request onServer:server withResponse:response];
+    request.server = server;
+    
+    return [coordinator handleRequest:request withResponse:response];
 }
 
 @end
