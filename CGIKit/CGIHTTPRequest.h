@@ -12,6 +12,8 @@ extern NSString *const CGIHTTPRequestMethodGet;
 extern NSString *const CGIHTTPRequestMethodPost;
 extern NSString *const CGIHTTPRequestMethodHead;
 
+@class CGIHTTPServer;
+
 @interface CGIHTTPRequest : NSObject
 
 @property (readonly) NSString *URI;
@@ -20,5 +22,6 @@ extern NSString *const CGIHTTPRequestMethodHead;
 @property (readonly) NSDictionary *headers;
 @property (readonly) NSData *request;
 @property (readonly) NSInputStream *requestStream;
+@property (readonly) CGIHTTPServer *server;
 
 @end
