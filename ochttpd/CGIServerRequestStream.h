@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@class CGIServerContext;
-
 @interface CGIServerRequestStream : NSInputStream
 
-- (id)initWithContext:(CGIServerContext *)context;
+- (id)initWithSocket:(int)socket;
 
 @end

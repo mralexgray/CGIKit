@@ -8,19 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import "GCDAsyncSocket.h"
-
 @class CGIServer;
 
-@interface CGIServerContext : NSObject <GCDAsyncSocketDelegate>
+@interface CGIServerContext : NSObject
 
-- (id)initWithServer:(CGIServer *)server socket:(GCDAsyncSocket *)socket;
+- (id)initWithServer:(CGIServer *)server socket:(int)socket address:(NSData *)address;
 
 - (void)processConnection;
-
-#pragma mark - Serialized reads and writes.
-
-- (NSData *)readLength:(NSUInteger)length;
-- (void)write:(NSData *)data;
 
 @end

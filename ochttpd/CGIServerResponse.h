@@ -10,4 +10,7 @@
 
 @interface CGIServerResponse : CGIHTTPResponse
 
+- (void)respondWithError:(NSString *)errorReason statusCode:(NSUInteger)statusCode;
+- (void)respondWithIncompleteRequest;
+
 @end

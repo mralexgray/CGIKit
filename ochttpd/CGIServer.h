@@ -8,16 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-#import "GCDAsyncSocket.h"
-
 @class CGIServerContext;
 
-@interface CGIServer : NSObject <GCDAsyncSocketDelegate>
+@interface CGIServer : NSObject
 
 @property (readonly) NSArray *hosts;
 
 - (id)initOnHost:(NSString *)host port:(NSUInteger)port virtualHosts:(NSArray *)hosts;
-- (BOOL)startWithError:(NSError **)error;
+- (void)accept;
+- (void)cleanUp;
 
 - (void)contextDidFinish:(CGIServerContext *)context;
 

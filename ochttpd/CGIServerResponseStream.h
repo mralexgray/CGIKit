@@ -12,6 +12,6 @@
 
 @interface CGIServerResponseStream : NSOutputStream
 
-- (id)initWithContext:(CGIServerContext *)context;
+- (id)initWithSocket:(int)socket;
 
 @end

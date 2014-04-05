@@ -99,7 +99,11 @@
 - (NSData *)readDataToData:(NSData *)endpoint
 {
     NSRange dataRange;
-    while (((dataRange = [_buffer rangeOfData:endpoint options:0 range:NSMakeRange(0, [_buffer length])]).location == NSNotFound) || [self increaseBuffer]);
+    while (((dataRange = [_buffer rangeOfData:endpoint options:0 range:NSMakeRange(0, [_buffer length])]).location == NSNotFound))
+    {
+        if (![self increaseBuffer])
+            break;
+    }
     
     NSRange readRange = NSMakeRange(0, (dataRange.location == NSNotFound) ? [_buffer length] : NSMaxRange(dataRange));
     NSData *outputData = [_buffer subdataWithRange:readRange];

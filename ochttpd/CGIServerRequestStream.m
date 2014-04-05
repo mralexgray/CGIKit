@@ -8,18 +8,23 @@
 
 #import "CGIServerRequestStream.h"
 
+#import <sys/socket.h>
+#import <netinet/in.h>
+#import <netinet6/in6.h>
+#import <arpa/inet.h>
+
 #import "CGIServerContext.h"
 
 @implementation CGIServerRequestStream
 {
-    CGIServerContext *_context;
+    int _socket;
 }
 
-- (id)initWithContext:(CGIServerContext *)context
+- (id)initWithSocket:(int)socket
 {
     if (self = [super init])
     {
-        _context = context;
+        _socket = socket;
     }
     return self;
 }
@@ -31,12 +36,7 @@
 
 - (NSInteger)read:(uint8_t *)buffer maxLength:(NSUInteger)len
 {
-    NSData *bytes = [_context readLength:len];
-    if (bytes)
-    {
-        [bytes getBytes:buffer length:MIN(len, [bytes length])];
-    }
-    return [bytes length];
+    return recv(_socket, buffer, len, 0);
 }
 
 @end

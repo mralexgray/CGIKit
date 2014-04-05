@@ -50,7 +50,6 @@
 		1D8173F418EF0AAF0036D284 /* CGIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8172E518ECE87E0036D284 /* CGIKit.framework */; };
 		1D8173F518EF0AAF0036D284 /* CGIServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D81732318ECED0D0036D284 /* CGIServer.framework */; };
 		1D8173F818EF0ACE0036D284 /* CGICoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173F718EF0ACE0036D284 /* CGICoordinator.m */; };
-		1D8173FB18EF106F0036D284 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173FA18EF106F0036D284 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations"; }; };
 		1D8173FF18EF1BFD0036D284 /* CGIVirtualHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8173FE18EF1BFD0036D284 /* CGIVirtualHost.m */; };
 		1D81740218EF232C0036D284 /* CGIServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81740118EF232C0036D284 /* CGIServer.m */; };
 		1D81740518EF2DBE0036D284 /* CGIServerContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81740418EF2DBE0036D284 /* CGIServerContext.m */; };
@@ -60,8 +59,9 @@
 		1D81741118EF37560036D284 /* CGIServerResponseStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81741018EF37560036D284 /* CGIServerResponseStream.m */; };
 		1D81741418EFC5640036D284 /* CGIBufferedOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81741218EFC5640036D284 /* CGIBufferedOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D81741518EFC5640036D284 /* CGIBufferedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81741318EFC5640036D284 /* CGIBufferedOutputStream.m */; };
-		1D81741818EFE0060036D284 /* CGIBufferedInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81741618EFE0060036D284 /* CGIBufferedInputStream.h */; };
+		1D81741818EFE0060036D284 /* CGIBufferedInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D81741618EFE0060036D284 /* CGIBufferedInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D81741918EFE0060036D284 /* CGIBufferedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81741718EFE0060036D284 /* CGIBufferedInputStream.m */; };
+		1D81742018F010C00036D284 /* NSScanner+CGIHTTPProtocolHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81741F18F010C00036D284 /* NSScanner+CGIHTTPProtocolHandling.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -137,8 +137,6 @@
 		1D8173ED18EF0A660036D284 /* cgicoordd.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = cgicoordd.1; sourceTree = "<group>"; };
 		1D8173F618EF0ACE0036D284 /* CGICoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGICoordinator.h; sourceTree = "<group>"; };
 		1D8173F718EF0ACE0036D284 /* CGICoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGICoordinator.m; sourceTree = "<group>"; };
-		1D8173F918EF106F0036D284 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Frameworks/CocoaAsyncSocket/GCD/GCDAsyncSocket.h; sourceTree = SOURCE_ROOT; };
-		1D8173FA18EF106F0036D284 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Frameworks/CocoaAsyncSocket/GCD/GCDAsyncSocket.m; sourceTree = SOURCE_ROOT; };
 		1D8173FC18EF191E0036D284 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		1D8173FD18EF1BFD0036D284 /* CGIVirtualHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIVirtualHost.h; sourceTree = "<group>"; };
 		1D8173FE18EF1BFD0036D284 /* CGIVirtualHost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIVirtualHost.m; sourceTree = "<group>"; };
@@ -158,6 +156,8 @@
 		1D81741318EFC5640036D284 /* CGIBufferedOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIBufferedOutputStream.m; sourceTree = "<group>"; };
 		1D81741618EFE0060036D284 /* CGIBufferedInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIBufferedInputStream.h; sourceTree = "<group>"; };
 		1D81741718EFE0060036D284 /* CGIBufferedInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIBufferedInputStream.m; sourceTree = "<group>"; };
+		1D81741E18F010C00036D284 /* NSScanner+CGIHTTPProtocolHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScanner+CGIHTTPProtocolHandling.h"; sourceTree = "<group>"; };
+		1D81741F18F010C00036D284 /* NSScanner+CGIHTTPProtocolHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScanner+CGIHTTPProtocolHandling.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,12 +334,12 @@
 		1D8173D818EF0A590036D284 /* ochttpd */ = {
 			isa = PBXGroup;
 			children = (
-				1D8173F918EF106F0036D284 /* GCDAsyncSocket.h */,
-				1D8173FA18EF106F0036D284 /* GCDAsyncSocket.m */,
 				1D8173FC18EF191E0036D284 /* main.h */,
 				1D8173D918EF0A590036D284 /* main.m */,
 				1D81740018EF232C0036D284 /* CGIServer.h */,
 				1D81740118EF232C0036D284 /* CGIServer.m */,
+				1D81741E18F010C00036D284 /* NSScanner+CGIHTTPProtocolHandling.h */,
+				1D81741F18F010C00036D284 /* NSScanner+CGIHTTPProtocolHandling.m */,
 				1D81740318EF2DBE0036D284 /* CGIServerContext.h */,
 				1D81740418EF2DBE0036D284 /* CGIServerContext.m */,
 				1D81740618EF36EE0036D284 /* CGIServerRequest.h */,
@@ -587,10 +587,10 @@
 			files = (
 				1D81740B18EF37060036D284 /* CGIServerRequestStream.m in Sources */,
 				1D81740218EF232C0036D284 /* CGIServer.m in Sources */,
-				1D8173FB18EF106F0036D284 /* GCDAsyncSocket.m in Sources */,
 				1D81740818EF36EE0036D284 /* CGIServerRequest.m in Sources */,
 				1D8173DA18EF0A590036D284 /* main.m in Sources */,
 				1D8173FF18EF1BFD0036D284 /* CGIVirtualHost.m in Sources */,
+				1D81742018F010C00036D284 /* NSScanner+CGIHTTPProtocolHandling.m in Sources */,
 				1D81741118EF37560036D284 /* CGIServerResponseStream.m in Sources */,
 				1D81740518EF2DBE0036D284 /* CGIServerContext.m in Sources */,
 				1D81740E18EF37210036D284 /* CGIServerResponse.m in Sources */,

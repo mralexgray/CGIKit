@@ -10,4 +10,12 @@
 
 @interface CGIServerRequest : CGIHTTPRequest
 
+@property NSString *URI;
+@property NSString *HTTPVersion;
+@property NSString *method;
+@property NSDictionary *headers;
+@property NSData *request;
+@property NSInputStream *requestStream;
+@property CGIHTTPServer *server;
+
 @end

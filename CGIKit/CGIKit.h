@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 
 #import <CGIKit/CGICommon.h>
+
+#import <CGIKit/CGIBufferedInputStream.h>
+#import <CGIKit/CGIBufferedOutputStream.h>
+
 #import <CGIKit/CGIHTTPRequest.h>
 #import <CGIKit/CGIHTTPResponse.h>
 #import <CGIKit/CGIHTTPServer.h>

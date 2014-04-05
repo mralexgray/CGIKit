@@ -79,18 +79,26 @@ int main(int argc, char *const *argv)
                         else
                             fprintf(stderr, "warning: duplicated root directory ignored: %s\n", optarg);
                     }
+                    break;
                 case 'v':
                     if (currentVirtualHost)
                     {
                         if (currentVirtualHost.serverRoot)
                             [virtualHosts addObject:currentVirtualHost];
+                        else if (currentVirtualHost.hostName)
+                            fprintf(stderr, "warning: empty named virtual host %s overridden.\n", [currentVirtualHost.hostName UTF8String]);
                     }
                     
                     currentVirtualHost = [[CGIVirtualHost alloc] init];
                     currentVirtualHost.hostName = @(optarg);
+                    break;
                 case 'h':
                 case 'V':
+                    exit(EXIT_SUCCESS);
+                    break;
+                case '?':
                 default:
+                    exit(EXIT_FAILURE);
                     break;
             }
         }
@@ -115,12 +123,11 @@ int main(int argc, char *const *argv)
         
         fprintf(stderr, "info: starting %lu hosts on %s port %lu.\n", [virtualHosts count], listen ? [listen UTF8String] : "(default)", port);
         
-        NSError *error = nil;
         CGIServer *server = [[CGIServer alloc] initOnHost:listen port:port virtualHosts:virtualHosts];
         
-        if (![server startWithError:&error])
+        if (!server)
         {
-            fprintf(stderr, "error: %s\n", [[error localizedDescription] UTF8String]);
+            fprintf(stderr, "error: cannot initialize server: %s\n", strerror(errno));
             exit(EXIT_FAILURE);
         }
         
@@ -130,8 +137,11 @@ int main(int argc, char *const *argv)
         
         while (keep_alive)
         {
+            [server accept];
             [mainRunLoop runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
         }
+        
+        [server cleanUp];
     }
     return 0;
 }
