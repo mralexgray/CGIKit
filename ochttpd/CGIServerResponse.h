@@ -10,7 +10,14 @@
 
 @interface CGIServerResponse : CGIHTTPResponse
 
+@property NSMutableDictionary *headers;
+@property CGIBufferedOutputStream *responseStream;
+
 - (void)respondWithError:(NSString *)errorReason statusCode:(NSUInteger)statusCode;
 - (void)respondWithIncompleteRequest;
+- (void)respondWithForbiddenRequest;
+
+- (void)sendHeader;
+- (void)send;
 
 @end

@@ -8,9 +8,13 @@
 
 #import <CGIKit/CGIKit.h>
 
+@class CGIServerRequest, CGIServerResponse;
+
 @interface CGIVirtualHost : CGIHTTPServer
 
 @property NSString *hostName;
 @property NSString *serverRoot;
+
+- (void)handleRequest:(CGIServerRequest *)request response:(CGIServerResponse *)response;
 
 @end

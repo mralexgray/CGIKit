@@ -14,6 +14,8 @@
 @synthesize HTTPVersion = _HTTPVersion;
 @synthesize method = _method;
 @synthesize headers = _headers;
+@synthesize request = _request;
 @synthesize requestStream = _requestStream;
+@synthesize server = _server;
 
 @end

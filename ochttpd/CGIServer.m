@@ -16,12 +16,18 @@
 #import <arpa/inet.h>
 #import <netdb.h>
 
+void _CGIServerRunLoopCancelCallBack(CGIServer *server, CFRunLoopRef rl, NSString *mode);
+void _CGIServerRunLoopPerformCallBack(CGIServer *server);
+
 @implementation CGIServer
 {
     NSString *_host;
     NSUInteger _port;
     NSArray *_hosts;
     NSMutableArray *_contexts;
+    
+    CFRunLoopSourceRef _serverRunLoopSource;
+    CFRunLoopSourceContext _serverRunLoopContext;
     
     int _listenSocket;
     NSData *_listenPort;
@@ -103,13 +109,12 @@
         // Bind it
         if (bind(_listenSocket, [_listenPort bytes], (socklen_t)[_listenPort length]) < 0)
             return self = nil;
-        
-#if DEBUG
+
         if (_socketType == AF_INET)
         {
             // IPv4
             const struct sockaddr_in *addr = [_listenPort bytes];
-            tprintf(@"Listening from IPv4 %s:%lu\n", inet_ntoa(addr->sin_addr), _port);
+            fprintf(stderr, "info: listening from IPv4 %s:%lu\n", inet_ntoa(addr->sin_addr), _port);
         }
         else
         {
@@ -117,15 +122,33 @@
             const struct sockaddr_in6 *addr = [_listenPort bytes];
             char buf[128];
             inet_ntop(AF_INET6, &(addr->sin6_addr), buf, 128);
-            tprintf(@"Listening from IPv6 [%s]:%lu\n", buf, _port);
+            fprintf(stderr, "info: listening from IPv6 [%s]:%lu\n", buf, _port);
         }
-#endif
         
         // Start listening.
         listen(_listenSocket, 5);
         
+        // Set up the run loop source
+        _serverRunLoopContext.version = 0;
+        _serverRunLoopContext.info = (__bridge void *)(self);
+        _serverRunLoopContext.retain = CFRetain;
+        _serverRunLoopContext.release = CFRelease;
+        _serverRunLoopContext.copyDescription = CFCopyDescription;
+        _serverRunLoopContext.equal = CFEqual;
+        _serverRunLoopContext.hash = CFHash;
+        _serverRunLoopContext.schedule = NULL;
+        _serverRunLoopContext.cancel = (void *)_CGIServerRunLoopCancelCallBack;
+        _serverRunLoopContext.perform = (void *)_CGIServerRunLoopPerformCallBack;
+        
+        _serverRunLoopSource = CFRunLoopSourceCreate(NULL, 0, &_serverRunLoopContext);
     }
     return self;
+}
+
+- (void)dealloc
+{
+    if (_serverRunLoopSource)
+        CFRelease(_serverRunLoopSource);
 }
 
 - (void)accept
@@ -136,8 +159,13 @@
     int clientConnection = accept(_listenSocket, (void *)buf, &length);
     if (clientConnection < 0)
     {
-        fprintf(stderr, "error: cannot accept client connection: %s\n", strerror(errno));
-        keep_alive = NO;
+        return;
+    }
+    
+    if (fcntl(clientConnection, F_SETFL, O_NONBLOCK) < 0)
+    {
+        fprintf(stderr, "warning: cannot make client connection non-blocking: %s\n", strerror(errno));
+        close(clientConnection);
         return;
     }
     
@@ -153,6 +181,26 @@
     [context processConnection];
 }
 
+- (void)arrangeNextRun
+{
+    CFRunLoopRef runLoop = CFRunLoopGetCurrent();
+    CFRunLoopSourceSignal(_serverRunLoopSource);
+    CFRunLoopWakeUp(runLoop);
+}
+
+- (void)addToRunLoop:(NSRunLoop *)runLoop
+{
+    CFRunLoopRef rl = [runLoop getCFRunLoop];
+    CFRunLoopAddSource(rl, _serverRunLoopSource, kCFRunLoopDefaultMode);
+    [self arrangeNextRun];
+}
+
+- (void)removeFromRunLoop:(NSRunLoop *)runLoop
+{
+    CFRunLoopRef rl = [runLoop getCFRunLoop];
+    CFRunLoopRemoveSource(rl, _serverRunLoopSource, kCFRunLoopDefaultMode);
+}
+
 - (void)cleanUp
 {
     fprintf(stderr, "info: ochttpd terminating.");
@@ -165,3 +213,14 @@
 }
 
 @end
+
+void _CGIServerRunLoopCancelCallBack(CGIServer *server, CFRunLoopRef rl, NSString *mode)
+{
+    [server cleanUp];
+}
+
+void _CGIServerRunLoopPerformCallBack(CGIServer *server)
+{
+    [server accept];
+    [server arrangeNextRun];
+}

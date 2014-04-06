@@ -15,8 +15,9 @@
 @property (readonly) NSArray *hosts;
 
 - (id)initOnHost:(NSString *)host port:(NSUInteger)port virtualHosts:(NSArray *)hosts;
-- (void)accept;
-- (void)cleanUp;
+
+- (void)addToRunLoop:(NSRunLoop *)runLoop;
+- (void)removeFromRunLoop:(NSRunLoop *)runLoop;
 
 - (void)contextDidFinish:(CGIServerContext *)context;
 

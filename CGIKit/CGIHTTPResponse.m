@@ -10,6 +10,16 @@
 
 @implementation CGIHTTPResponse
 
-@dynamic status, statusCode, headers, response, responseStream;
+@dynamic status, statusCode, headers, response, responseStream, HTTPVersion;
+
+- (id)objectForKeyedSubscript:(NSString *)key
+{
+    return self.headers[key];
+}
+
+- (void)setObject:(id)object forKeyedSubscript:(NSString *)key
+{
+    self.headers[key] = object;
+}
 
 @end

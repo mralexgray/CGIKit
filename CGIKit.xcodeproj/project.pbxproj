@@ -64,6 +64,23 @@
 		1D81742018F010C00036D284 /* NSScanner+CGIHTTPProtocolHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D81741F18F010C00036D284 /* NSScanner+CGIHTTPProtocolHandling.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1DEF050718F12AC300F7A36A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D38226518E9464800EFEB43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D8173E518EF0A660036D284;
+			remoteInfo = cgicoordd;
+		};
+		1DEF050918F12AC600F7A36A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D38226518E9464800EFEB43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D8173E518EF0A660036D284;
+			remoteInfo = cgicoordd;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		1D8173D318EF0A590036D284 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -456,6 +473,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1DEF050A18F12AC600F7A36A /* PBXTargetDependency */,
 			);
 			name = mod_objc;
 			productName = mod_objc;
@@ -473,6 +491,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1DEF050818F12AC300F7A36A /* PBXTargetDependency */,
 			);
 			name = ochttpd;
 			productName = ochttpd;
@@ -608,6 +627,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1DEF050818F12AC300F7A36A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D8173E518EF0A660036D284 /* cgicoordd */;
+			targetProxy = 1DEF050718F12AC300F7A36A /* PBXContainerItemProxy */;
+		};
+		1DEF050A18F12AC600F7A36A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D8173E518EF0A660036D284 /* cgicoordd */;
+			targetProxy = 1DEF050918F12AC600F7A36A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		1D8172F118ECE87E0036D284 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -634,6 +666,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				WARNING_CFLAGS = "-Wall";
 			};
 			name = Debug;
 		};
@@ -643,6 +676,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				WARNING_CFLAGS = "-Wall";
 			};
 			name = Release;
 		};
@@ -1049,6 +1083,7 @@
 				1D81730D18ECE87E0036D284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D81734118ECED0E0036D284 /* Build configuration list for PBXNativeTarget "CGIServer" */ = {
 			isa = XCConfigurationList;
@@ -1057,6 +1092,7 @@
 				1D81734318ECED0E0036D284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D8173AB18ED218A0036D284 /* Build configuration list for PBXNativeTarget "mod_objc" */ = {
 			isa = XCConfigurationList;
@@ -1065,6 +1101,7 @@
 				1D8173AD18ED218A0036D284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D8173DF18EF0A590036D284 /* Build configuration list for PBXNativeTarget "ochttpd" */ = {
 			isa = XCConfigurationList;
@@ -1073,6 +1110,7 @@
 				1D8173E118EF0A590036D284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D8173EF18EF0A660036D284 /* Build configuration list for PBXNativeTarget "cgicoordd" */ = {
 			isa = XCConfigurationList;
@@ -1081,6 +1119,7 @@
 				1D8173F118EF0A660036D284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

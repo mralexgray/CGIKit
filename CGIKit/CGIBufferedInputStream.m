@@ -20,6 +20,12 @@
 {
     if (self = [super init])
     {
+        if ([_underlyingStream isKindOfClass:[self class]])
+        {
+            self = nil;
+            return (CGIBufferedInputStream *)_underlyingStream;
+        }
+        
         if (underlyingStream)
             _underlyingStream = underlyingStream;
         else

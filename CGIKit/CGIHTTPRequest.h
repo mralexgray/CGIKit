@@ -24,4 +24,6 @@ extern NSString *const CGIHTTPRequestMethodHead;
 @property (readonly) NSInputStream *requestStream;
 @property (readonly) CGIHTTPServer *server;
 
+- (id)objectForKeyedSubscript:(NSString *)key;
+
 @end

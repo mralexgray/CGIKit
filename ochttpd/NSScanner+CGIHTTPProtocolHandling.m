@@ -50,7 +50,30 @@
 
 - (BOOL)scanHTTPMethod:(NSString *__autoreleasing *)method URI:(NSString *__autoreleasing *)URI protocolVersion:(NSString *__autoreleasing *)protocolVersion
 {
-    return NO;
+    [self pushState];
+    
+    CGIScannerAssert([self scanUpToCharactersFromSet:[NSCharacterSet whitespaceCharacterSet] intoString:method]);
+    [self scanCharactersFromSet:[NSCharacterSet whitespaceCharacterSet] intoString:NULL];
+    CGIScannerAssert([self scanUpToCharactersFromSet:[NSCharacterSet whitespaceCharacterSet] intoString:URI]);
+    [self scanCharactersFromSet:[NSCharacterSet whitespaceCharacterSet] intoString:NULL];
+    if (protocolVersion)
+        *protocolVersion = [[self string] substringFromIndex:[self scanLocation]];
+    
+    [self popState];
+    return YES;
+}
+
+- (BOOL)scanHTTPHeaderField:(NSString *__autoreleasing *)field value:(NSString *__autoreleasing *)value
+{
+    [self pushState];
+    
+    CGIScannerAssert([self scanUpToString:@": " intoString:field]);
+    [self scanString:@": " intoString:NULL];
+    if (value)
+        *value = [[self string] substringFromIndex:[self scanLocation]];
+    
+    [self popState];
+    return YES;
 }
 
 @end

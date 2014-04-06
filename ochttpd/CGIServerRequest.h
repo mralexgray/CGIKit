@@ -15,7 +15,7 @@
 @property NSString *method;
 @property NSDictionary *headers;
 @property NSData *request;
-@property NSInputStream *requestStream;
+@property CGIBufferedInputStream *requestStream;
 @property CGIHTTPServer *server;
 
 @end

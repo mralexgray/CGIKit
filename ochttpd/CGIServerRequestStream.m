@@ -36,7 +36,14 @@
 
 - (NSInteger)read:(uint8_t *)buffer maxLength:(NSUInteger)len
 {
-    return recv(_socket, buffer, len, 0);
+    NSInteger rv = recv(_socket, buffer, len, 0);
+    if (rv < 0)
+    {
+        fprintf(stderr, "warning: IO error when reading: %s\n", strerror(errno));
+        return 0;
+    }
+    else
+        return rv;
 }
 
 @end

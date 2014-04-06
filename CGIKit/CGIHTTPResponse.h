@@ -12,8 +12,12 @@
 
 @property NSUInteger statusCode;
 @property NSString *status;
-@property NSDictionary *headers;
+@property NSString *HTTPVersion;
+@property (readonly) NSMutableDictionary *headers;
 @property NSMutableData *response;
-@property NSOutputStream *responseStream;
+@property (readonly) NSOutputStream *responseStream;
+
+- (id)objectForKeyedSubscript:(NSString *)key;
+- (void)setObject:(id)object forKeyedSubscript:(NSString *)key;
 
 @end

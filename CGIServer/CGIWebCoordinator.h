@@ -12,9 +12,13 @@
 
 extern NSString *const CGIWebCoordinatorPortName;
 
-@interface CGIWebCoordinator : NSObject
+@protocol CGIWebCoordinator <NSObject>
 
 - (int)handleRequest:(in CGIHTTPRequest *)request
         withResponse:(inout CGIHTTPResponse *)response;
+
+@end
+
+@interface CGIWebCoordinator : NSObject <CGIWebCoordinator>
 
 @end

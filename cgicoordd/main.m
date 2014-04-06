@@ -34,6 +34,7 @@ int main(int argc, const char * argv[])
         
         // Build the coordinator
         CGICoordinator *coordinator = [[CGICoordinator alloc] init];
+        NSProtocolChecker *checker = [NSProtocolChecker protocolCheckerWithTarget:coordinator protocol:@protocol(CGIWebCoordinator)];
         
         // Start the listening port
         NSPort *port = [NSPort port];
@@ -43,7 +44,7 @@ int main(int argc, const char * argv[])
         // Start the listening connection
         NSConnection *conn = [NSConnection connectionWithReceivePort:port sendPort:nil];
         NSRunLoop *mainRunLoop = [NSRunLoop mainRunLoop];
-        [conn setRootObject:coordinator];
+        [conn setRootObject:checker];
         [conn addRunLoop:mainRunLoop];
         
         // Run it.

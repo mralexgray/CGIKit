@@ -134,14 +134,14 @@ int main(int argc, char *const *argv)
         keep_alive = YES;
         
         NSRunLoop *mainRunLoop = [NSRunLoop mainRunLoop];
+        [server addToRunLoop:mainRunLoop];
         
         while (keep_alive)
         {
-            [server accept];
             [mainRunLoop runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
         }
         
-        [server cleanUp];
+        [server removeFromRunLoop:mainRunLoop];
     }
     return 0;
 }

@@ -23,4 +23,9 @@
     return base;
 }
 
+- (void)handleRequest:(CGIServerRequest *)request response:(CGIServerResponse *)response
+{
+    
+}
+
 @end

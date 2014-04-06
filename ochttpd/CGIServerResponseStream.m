@@ -14,6 +14,7 @@
 #import <arpa/inet.h>
 
 #import "CGIServerContext.h"
+#import "main.h"
 
 @implementation CGIServerResponseStream
 {
@@ -36,7 +37,16 @@
 
 - (NSInteger)write:(const uint8_t *)buffer maxLength:(NSUInteger)len
 {
-    return send(_socket, buffer, len, 0);
+    tprintf(@"Trying to send buffer with length %lu to socket %u:\n%s", len, _socket, buffer);
+    
+    NSInteger rv = send(_socket, buffer, len, 0);
+    if (rv < 0)
+    {
+        fprintf(stderr, "warning: IO error when writing: %s\n", strerror(errno));
+        return 0;
+    }
+    else
+        return rv;
 }
 
 @end
